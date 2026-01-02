@@ -14,58 +14,7 @@
 
   <div id="mainnav" class="main-nav-container sticky top-0 z-40">
     <div class="container">
-      <div class="flex items-center justify-between h-24">
-
-        {# ===== Left: Menu ===== #}
-        <div class="flex items-center gap-4 flex-1">
-          <a class="lg:hidden" href="#mobile-menu" aria-label="Open menu">
-            <i class="sicon-menu text-2xl"></i>
-          </a>
-
-          <div class="hidden lg:block">
-            <custom-main-menu></custom-main-menu>
-          </div>
-        </div>
-
-        {# ===== Center: Logo ===== #}
-        <div class="flex justify-center flex-shrink-0">
-          <a href="{{ store.url }}">
-            <img
-              src="{{ store.logo }}"
-              alt="{{ store.name }}"
-              class="h-12 mx-auto"
-              loading="eager"
-            />
-            {% if is_page('index') %}
-              <h1 class="sr-only">{{ store.name }}</h1>
-            {% else %}
-              <h2 class="sr-only">{{ store.name }}</h2>
-            {% endif %}
-          </a>
-        </div>
-
-        {# ===== Right: Icons ===== #}
-        <div class="flex items-center justify-end gap-6 flex-1">
-
-          <button aria-label="Search" onclick="salla.event.dispatch('search::open')" class="text-xl">
-            <i class="sicon-search"></i>
-          </button>
-
-          {% if user.type == 'user' %}
-            <salla-user-menu avatar-only show-header></salla-user-menu>
-          {% else %}
-            <button aria-label="Login" onclick="salla.event.dispatch('login::open')" class="text-xl">
-              <i class="sicon-user-circle"></i>
-            </button>
-          {% endif %}
-
-          <salla-cart-summary>
-            <i slot="icon" class="sicon-shopping-bag text-xl"></i>
-          </salla-cart-summary>
-
-        </div>
-
-      </div>
+     
     </div>
   </div>
 
